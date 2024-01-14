@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Open sans-serif;
+}
+
+body{
+    background: #081b29;
+    color: #ededed;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none; 
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+
+}
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+
+}
+.home-content{
+    max-width: 600px;
+    display: inline-block;
+}
+
+
+.typingtext{
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typed;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(30,end);
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes typed{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+
+}
+
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    line height: 1.2;
+}
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+
+}
+.home-content .button-box {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 345px;
+    /* border: solid #00abf0 1px; */
+    text-decoration: none;
+
+}
+
+.button-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 150px;
+    border: 2px solid #00abf0;
+    background: #00abf0;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.button-box a.second{
+    background-color: transparent;
+    color: #00abf0;
+
+}
+.button-box a.second::before{
+    background: #00abf0;
+
+}
+.button-box a.second:hover{
+    color: #081b29;
+}
+.button-box a.first:hover{
+    color: #00abf0;
+}
+.button-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.button-box a:hover::before{
+    width: 100%;
+
+}
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 250px;
+    background: #081b29;
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #00abf0;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #00abf0;
+    
+    z-index: -1;
+    transition: .5s;
+
+}
+
+.home-sci a:hover::before{
+    width: 100%;
+    
+}
+.home-sci a:hover{
+    color: #081b29;
+}
+
+.image {
+    height: 300px;
+    width: 250px;
+    background-image: url("WhatsApp\ Image\ 2024-01-14\ at\ 11.47.37\ AM.jpeg");
+    background-size: cover;
+    box-shadow: 2px 2px 10px #00abf0;
+    margin-left: 100px;
+    /* animation-name: imageisme;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+
+    animation: imageisme 2s ease-in 0s infinite alternate;
+
+}
+
+/* .image:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px #00abf0;
+    
+    transition: .5s;
+} */
+
+
+@keyframes imageisme {
+    from{
+        transform: scale(1.1);
+        box-shadow: 2px 2px 10px #00abf0;
+    }
+    to{
+        transform: scale(1);
+        box-shadow: 5px 5px 30px palevioletred;
+        
+    }
+}
